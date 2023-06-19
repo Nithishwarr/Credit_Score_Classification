@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Credit Score Classification</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Welcome to Credit Score Classification</h4>
+            <p><div class="sc-iHpopC kWfALg"><div class="sc-eFrsUN bDeBDR"><h2 class="sc-csCMJt sc-fbJfA sc-eqAOSo gttkKI hmVOek">About Model</h2></div><div class="sc-idMGot eaWsYA"><div class="sc-hLqUdS eDiNTx"><div style="min-height: 80px;"><div class="sc-dmLtQE jWwnsR"><p><strong>Problem Statement:</strong><br>
+                Now we are going to predict Credit Score By using Rabdom Forest Classifier. Over the years, the company has collected basic bank details and gathered a lot of credit-related information. The management wants to build an intelligent system to segregate the people into credit score brackets to reduce the manual efforts.</p>
+                <p><strong>Task:</strong><br>
+                Given a person’s credit-related information,we build an machine learning model that can classify the credit score.</p></div></div></div></div></div></p>
+            <hr>
+          </div>
+          <h4 class="text-center mt-3 my-3">Find Your Credit Score By Filling in the details as given below
+        </h4>
+          <div class="container my-4">
+
+            <form action="/" method="POST">
+
+
+                <!-- Month -->
+
+                <div class="form-group">
+                    <label for="Month">Enter Month</label>
+                    <input type="text" class="form-control" id="Month" name="Month">
+                </div>
+
+                <!-- Annual_Income -->
+
+                <div class="form-group">
+                    <label for="Annual_Income">Enter your Annual Income </label>
+                    <input type="text" class="form-control" id="Annual_Income" name="Annual_Income">
+                </div>
+
+                <!-- Interest_Rate -->
+
+                <div class="form-group">
+                    <label for="Interest_Rate">Enter Interest Rate (upto 36%)</label>
+                    <input type="text" class="form-control" id="Interest_Rate" name="Interest_Rate">
+                </div>
+
+                <!-- Num_of_Loan -->
+
+                <div class="form-group">
+                    <label for="Num_of_Loan">Enter Number of Loan </label>
+                    <input type="text" class="form-control" id="Num_of_Loan" name="Num_of_Loan">
+                </div>
+
+                <!-- Type_of_Loan -->
+
+                <div class="form-group">
+                    <label for="Type_of_Loan">Enter type of Loan(eg:450,900)</label>
+                    <input type="text" class="form-control" id="Type_of_Loan" name="Type_of_Loan">
+                </div>
+
+                <!-- Delay_from_due_date -->
+
+                <div class="form-group">
+                    <label for="Delay_from_due_date">Enter how many days delay from the Due date </label>
+                    <input type="text" class="form-control" id="Delay_from_due_date" name="Delay_from_due_date">
+                </div>
+
+                <!-- Num_of_Delayed_Payment -->
+
+                <div class="form-group">
+                    <label for="Num_of_Delayed_Payment">Enter Number of delayed payments </label>
+                    <input type="text" class="form-control" id="Num_of_Delayed_Payment" name="Num_of_Delayed_Payment">
+                </div>
+
+                <!-- Changed_Credit_Limit -->
+
+                <div class="form-group">
+                    <label for="Changed_Credit_Limit">Enter changed credit limit(Enter 0 to 30) </label>
+                    <input type="text" class="form-control" id="Changed_Credit_Limit" name="Changed_Credit_Limit">
+                </div>
+
+                <!-- Credit_Mix -->
+
+                <div class="form-group">
+                    <label for="Credit_Mix">Enter Credit_Mix(eg:Good,Bad,Standard) </label>
+                    <input type="text" class="form-control" id="Credit_Mix" name="Credit_Mix">
+                </div>
+
+                <!-- Outstanding_Debt -->
+
+                <div class="form-group">
+                    <label for="Outstanding_Debt">Enter your Outstanding debit </label>
+                    <input type="text" class="form-control" id="Outstanding_Debt" name="Outstanding_Debt">
+                </div>
+
+                <!-- Credit_Utilization_Ratio -->
+
+                <div class="form-group">
+                    <label for="Credit_Utilization_Ratio">Enter Credit utilization ratio(Range:20-50) </label>
+                    <input type="text" class="form-control" id="Credit_Utilization_Ratio" name="Credit_Utilization_Ratio">
+                </div>
+
+                <!-- Credit_History_Age_inMonths -->
+
+                <div class="form-group">
+                    <label for="Credit_History_Age_inMonths">Enter Credit history age in months(eg:200 months) </label>
+                    <input type="text" class="form-control" id="Credit_History_Age_inMonths" name="Credit_History_Age_inMonths">
+                </div>
+
+                <!-- Total_EMI_per_month -->
+
+                <div class="form-group">
+                    <label for="Total_EMI_per_month">Enter Total EMI per Month </label>
+                    <input type="text" class="form-control" id="Total_EMI_per_month" name="Total_EMI_per_month">
+                </div>
+
+                <!-- Amount_invested_monthly -->
+
+                <div class="form-group">
+                    <label for="Amount_invested_monthly">Enter Total Amount invested per Month </label>
+                    <input type="text" class="form-control" id="Amount_invested_monthly" name="Amount_invested_monthly">
+                </div>
+
+                <!-- Monthly_Balance -->
+
+                <div class="form-group">
+                    <label for="Monthly_Balance">Enter your Monthly Balance </label>
+                    <input type="text" class="form-control" id="Monthly_Balance" name="Monthly_Balance">
+                </div>
+
+
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Predict</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
